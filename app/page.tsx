@@ -1,18 +1,25 @@
 import Image from "next/image";
 
 const skills = [
-  "Next.js",
-  "React",
-  "TypeScript",
-  "JavaScript",
   "Python",
   "Java",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "FastAPI",
+  "REST APIs",
+  "Natural Language Processing",
+  "Machine Learning",
+  "Sentence Transformers",
+  "Hugging Face",
+  "Data Analysis",
+  "Data Visualization",
   "HTML/CSS",
   "Git & GitHub",
   "Vercel",
+  "Render",
   "Responsive Design",
-  "REST APIs",
-  "Data Visualization",
 ];
 
 const highlights = [
@@ -22,6 +29,15 @@ const highlights = [
   "Category-based budgeting",
   "Spending analytics and charts",
   "Responsive component architecture",
+];
+
+const aiHighlights = [
+  "Resume-to-job semantic matching",
+  "Natural language processing",
+  "Automated skill extraction",
+  "AI-assisted resume optimization",
+  "REST API architecture with FastAPI",
+  "Full-stack frontend/backend integration",
 ];
 
 export default function Home() {
@@ -103,20 +119,137 @@ export default function Home() {
 
           <div className="project-links">
             <a className="button button-dark" href="https://budgetflow-hyfb-six.vercel.app" target="_blank" rel="noreferrer">Live project ↗</a>
-            <span className="muted-note">Add your GitHub repository link here when ready.</span>
+            <span className="muted-note">https://github.com/tfindleyjr/budgetflow</span>
+          </div>
+        </article>
+
+        <article className="project-card">
+          <div className="project-meta-row">
+            <div>
+              <p className="eyebrow">AI / NLP Project</p>
+
+              <h3>AI Resume & Job Matcher</h3>
+
+              <p className="project-subtitle">
+                Intelligent Resume Analysis Platform
+              </p>
+            </div>
+
+            <div className="project-number">
+              02
+            </div>
+          </div>
+
+          <div className="project-hero-image">
+            <Image
+              src="/projects/ai-resume-1.png"
+              alt="AI Resume and Job Matcher application"
+              width={1920}
+              height={1080}
+            />
+          </div>
+
+          <div className="project-content-grid">
+            <div>
+              <p className="project-description">
+                AI Resume &amp; Job Matcher is a full-stack application
+                that analyzes resumes against job descriptions using
+                natural language processing, similarity scoring, and
+                automated skill extraction. The platform identifies
+                matching skills, missing qualifications, generates match
+                scores, and provides targeted recommendations for
+                improving a candidate&apos;s resume.
+              </p>
+
+              <div className="tag-row">
+                {[
+                  "Python",
+                  "FastAPI",
+                  "Next.js",
+                  "React",
+                  "TypeScript",
+                  "NLP",
+                  "REST APIs",
+                  "Skill Extraction",
+                  "Render",
+                  "Vercel",
+                ].map((tag) => (
+                  <span
+                    key={tag}
+                    className="tag"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="feature-list">
+              {aiHighlights.map((item) => (
+                <div
+                  key={item}
+                  className="feature-item"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="project-gallery">
+            <Image
+              src="/projects/ai-resume-2.png"
+              alt="AI Resume Job Matcher analysis results"
+              width={1920}
+              height={1080}
+            />
+
+            <Image
+              src="/projects/ai-resume-3.png"
+              alt="AI Resume Job Matcher recommendations"
+              width={1920}
+              height={1080}
+            />
+          </div>
+
+          <div className="project-links">
+            <a
+              className="button button-dark"
+              href="https://airesume-ten-opal.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live Project ↗
+            </a>
+
+            <a
+              className="text-link"
+              href="https://github.com/tfindleyjr/ai-resume-job-matcher"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub ↗
+            </a>
           </div>
         </article>
 
         <div className="coming-soon-grid">
           <article className="coming-card">
-            <span>02</span>
-            <h3>Next Project</h3>
-            <p>Reserve this slot for a project that shows a different technical skill set from BudgetFlow.</p>
-          </article>
-          <article className="coming-card">
             <span>03</span>
+            <h3>Next Project</h3>
+            <p>
+              Data-focused project demonstrating analytics, visualization, and
+              data-driven problem solving.
+            </p>
+          </article>
+
+          <article className="coming-card">
+            <span>04</span>
             <h3>Creative Technology</h3>
-            <p>Use this space for a visually ambitious project that blends design, product thinking, and engineering.</p>
+            <p>
+              A visually ambitious project blending design, product thinking, and
+              engineering.
+            </p>
           </article>
         </div>
       </section>
@@ -135,7 +268,11 @@ export default function Home() {
               My background in computer science and mathematics gives me the technical foundation to build software, while my creative interests push me to care just as much about how a product feels, communicates, and fits into people’s lives.
             </p>
             <p>
-              I’m currently building a portfolio around software development, product thinking, and creative technology, with an emphasis on work that can be explained clearly from problem to solution.
+              <p>
+                I&apos;m currently building a multidisciplinary computer science portfolio
+                spanning software development, artificial intelligence, data analysis,
+                product thinking, and creative technology.
+              </p>
             </p>
           </div>
         </div>
@@ -189,9 +326,9 @@ export default function Home() {
             I’m open to software, product, technology, and creative opportunities where I can combine technical execution with strong ideas.
           </p>
           <div className="contact-actions">
-            <a className="button button-light" href="mailto:YOUR_EMAIL_HERE">Email me</a>
-            <a className="text-link" href="YOUR_LINKEDIN_URL_HERE">LinkedIn ↗</a>
-            <a className="text-link" href="YOUR_GITHUB_URL_HERE">GitHub ↗</a>
+            <a className="button button-light" href="mailto:tfindleyjr@gmail.com">Email me</a>
+            <a className="text-link" href="https://www.linkedin.com/in/trenton-findley-jr-019439309/">LinkedIn ↗</a>
+            <a className="text-link" href="https://github.com/tfindleyjr">GitHub ↗</a>
           </div>
         </div>
       </section>
