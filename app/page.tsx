@@ -1,43 +1,36 @@
 import Image from "next/image";
 
-const skills = [
-  "Python",
-  "Java",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "FastAPI",
-  "REST APIs",
-  "Natural Language Processing",
-  "Machine Learning",
-  "Sentence Transformers",
-  "Hugging Face",
-  "Data Analysis",
-  "Data Visualization",
-  "HTML/CSS",
-  "Git & GitHub",
-  "Vercel",
-  "Render",
-  "Responsive Design",
+const coreSkills = [
+  "TypeScript", "React", "Next.js", "Python", "FastAPI", "Supabase", "PostgreSQL",
+  "OpenAI API", "REST APIs", "Authentication", "Database Design", "Git & GitHub",
+  "Vercel", "Render", "PWA", "Responsive UI", "Product Design", "Agile / Scrum",
 ];
 
-const highlights = [
+const becomrFeatures = [
+  "Adaptive AI-generated Daily and Weekly Trials",
+  "Supabase authentication and cloud-synced user state",
+  "Independent per-path progression, Bosses, and Proof history",
+  "Dynamic Compass visualization driven by real user progression",
+  "Creator Tree marketplace foundation and cross-path Constellations",
+  "PWA/mobile app shell, offline-aware persistence, and production deployment",
+];
+
+const resumeFeatures = [
+  "Resume-to-job semantic matching",
+  "Natural language processing and skill extraction",
+  "Match scoring and targeted recommendations",
+  "REST API architecture with FastAPI",
+  "Frontend/backend integration and CSV export",
+  "Cloud deployment across Vercel and Render",
+];
+
+const budgetFeatures = [
   "CRUD transaction management",
-  "Client-side persistence with localStorage",
+  "Client-side persistence",
   "Search, filtering, and sorting",
   "Category-based budgeting",
   "Spending analytics and charts",
   "Responsive component architecture",
-];
-
-const aiHighlights = [
-  "Resume-to-job semantic matching",
-  "Natural language processing",
-  "Automated skill extraction",
-  "AI-assisted resume optimization",
-  "REST API architecture with FastAPI",
-  "Full-stack frontend/backend integration",
 ];
 
 export default function Home() {
@@ -47,23 +40,26 @@ export default function Home() {
         <a className="brand" href="#top">TF.</a>
         <nav>
           <a href="#work">Work</a>
+          <a href="#process">Process</a>
           <a href="#about">About</a>
-          <a href="#skills">Skills</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
 
       <section id="top" className="hero section-shell">
-        <div className="hero-kicker">Computer Science × Design × Product</div>
-        <h1>
-          I build useful digital products with a strong point of view.
-        </h1>
+        <div className="hero-kicker">Software Engineering × AI × Product</div>
+        <h1>I build products from idea to production.</h1>
         <p className="hero-copy">
-          I’m Trenton Findley Jr., a computer science graduate and master’s student focused on building software that feels clear, intentional, and human.
+          I’m Trenton Findley Jr., a computer science graduate and master’s student building full-stack products that combine engineering, artificial intelligence, thoughtful UX, and real-world utility.
         </p>
         <div className="hero-actions">
           <a className="button button-dark" href="#work">View selected work</a>
-          <a className="button button-light" href="#contact">Get in touch</a>
+          <a className="button button-light" href="https://becomr-ten.vercel.app" target="_blank" rel="noreferrer">Open BECOMR ↗</a>
+        </div>
+        <div className="hero-proof">
+          <span><b>03</b> shipped products</span>
+          <span><b>Full-stack</b> frontend + backend</span>
+          <span><b>Production</b> auth, AI, database, cloud</span>
         </div>
       </section>
 
@@ -73,270 +69,168 @@ export default function Home() {
           <h2>Selected Work</h2>
         </div>
 
-        <article className="project-card">
+        <article className="project-card featured-project">
           <div className="project-meta-row">
             <div>
-              <p className="eyebrow">Featured Project</p>
-              <h3>BudgetFlow</h3>
-              <p className="project-subtitle">Personal Finance Dashboard</p>
+              <p className="eyebrow">Featured Product · Live</p>
+              <h3>BECOMR</h3>
+              <p className="project-subtitle">AI-Powered Real-Life Capability Progression Platform</p>
             </div>
             <div className="project-number">01</div>
           </div>
 
-          <div className="project-hero-image">
-            <Image
-              src="/projects/budgetflow-3.png"
-              alt="BudgetFlow personal finance dashboard"
-              width={1920}
-              height={1080}
-              priority
-            />
+          <div className="becomr-showcase" aria-label="BECOMR product preview">
+            <div className="becomr-topbar"><strong>BECOMR</strong><span>BECOME CAPABLE.</span></div>
+            <div className="becomr-stage">
+              <div className="becomr-copy">
+                <small>COMPASS / YOUR CAPABILITY MAP</small>
+                <h4>Proof changes the <em>tree.</em></h4>
+                <p>Choose what you want to become capable of. BECOMR turns that direction into adaptive Trials, measurable Proof, Weekly Bosses, and a living record of growth.</p>
+                <div className="becomr-stats"><span>AI FORGE</span><span>PROOF</span><span>WEEKLY BOSSES</span></div>
+              </div>
+              <div className="compass-art">
+                <i className="orbit orbit-one"/><i className="orbit orbit-two"/><i className="orbit orbit-three"/>
+                <div className="tree-trunk"/><div className="tree-crown">✦</div>
+                <span className="node n1">◇</span><span className="node n2">◇</span><span className="node n3">◇</span>
+              </div>
+            </div>
           </div>
 
           <div className="project-content-grid">
             <div>
               <p className="project-description">
-                BudgetFlow is a responsive personal finance dashboard built to help users manage transactions, track spending, set category budgets, and understand financial behavior through visual insights.
+                BECOMR is the most complete product I’ve built: a progression system where users level up by proving real capability instead of simply checking off habits. I designed the product architecture, progression engine, adaptive AI flows, authentication and persistence model, responsive interface, PWA experience, and production deployment.
               </p>
               <div className="tag-row">
-                {['Next.js', 'React', 'TypeScript', 'CSS', 'Recharts', 'Vercel'].map((tag) => (
-                  <span key={tag} className="tag">{tag}</span>
-                ))}
+                {["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "OpenAI API", "PWA", "Vercel", "Product Design"].map(tag => <span className="tag" key={tag}>{tag}</span>)}
               </div>
             </div>
-
             <div className="feature-list">
-              {highlights.map((item) => (
-                <div key={item} className="feature-item">{item}</div>
-              ))}
+              {becomrFeatures.map(item => <div className="feature-item" key={item}>{item}</div>)}
             </div>
           </div>
 
-          <div className="project-gallery">
-            <Image src="/projects/budgetflow-1.png" alt="BudgetFlow spending insights and charts" width={1600} height={900} />
-            <Image src="/projects/budgetflow-2.png" alt="BudgetFlow budgets and transactions" width={1600} height={900} />
+          <div className="case-study-strip">
+            <div><small>PROBLEM</small><p>Traditional habit trackers reward repetition, not demonstrated ability.</p></div>
+            <div><small>SYSTEM</small><p>Orient → Act → Prove → Grow → Reflect → Reorient.</p></div>
+            <div><small>ENGINEERING</small><p>Local-first state, Supabase cloud sync, AI adaptation, PWA delivery.</p></div>
+            <div><small>PRODUCT</small><p>Dynamic skill paths, Weekly campaigns, Marks, Constellations, Creator Trees.</p></div>
           </div>
 
           <div className="project-links">
-            <a className="button button-dark" href="https://budgetflow-hyfb-six.vercel.app" target="_blank" rel="noreferrer">Live project ↗</a>
-            <span className="muted-note">https://github.com/tfindleyjr/budgetflow</span>
+            <a className="button button-dark" href="https://becomr-ten.vercel.app" target="_blank" rel="noreferrer">Launch BECOMR ↗</a>
+            <a className="text-link dark-link" href="https://github.com/tfindleyjr/becomr" target="_blank" rel="noreferrer">GitHub ↗</a>
           </div>
         </article>
 
         <article className="project-card">
           <div className="project-meta-row">
             <div>
-              <p className="eyebrow">AI / NLP Project</p>
-
+              <p className="eyebrow">AI / NLP · Full Stack</p>
               <h3>AI Resume & Job Matcher</h3>
-
-              <p className="project-subtitle">
-                Intelligent Resume Analysis Platform
-              </p>
+              <p className="project-subtitle">Intelligent Resume Analysis Platform</p>
             </div>
-
-            <div className="project-number">
-              02
-            </div>
+            <div className="project-number">02</div>
           </div>
-
           <div className="project-hero-image">
-            <Image
-              src="/projects/ai-resume-1.png"
-              alt="AI Resume and Job Matcher application"
-              width={1920}
-              height={1080}
-            />
+            <Image src="/projects/ai-resume-1.png" alt="AI Resume and Job Matcher application" width={1920} height={1080}/>
           </div>
-
           <div className="project-content-grid">
             <div>
-              <p className="project-description">
-                AI Resume &amp; Job Matcher is a full-stack application
-                that analyzes resumes against job descriptions using
-                natural language processing, similarity scoring, and
-                automated skill extraction. The platform identifies
-                matching skills, missing qualifications, generates match
-                scores, and provides targeted recommendations for
-                improving a candidate&apos;s resume.
-              </p>
-
-              <div className="tag-row">
-                {[
-                  "Python",
-                  "FastAPI",
-                  "Next.js",
-                  "React",
-                  "TypeScript",
-                  "NLP",
-                  "REST APIs",
-                  "Skill Extraction",
-                  "Render",
-                  "Vercel",
-                ].map((tag) => (
-                  <span
-                    key={tag}
-                    className="tag"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              <p className="project-description">A full-stack application that analyzes resumes against job descriptions using NLP, similarity scoring, and automated skill extraction. It identifies matching skills, missing qualifications, generates match scores, and produces targeted resume recommendations.</p>
+              <div className="tag-row">{["Python","FastAPI","Next.js","TypeScript","NLP","REST APIs","Render","Vercel"].map(tag=><span className="tag" key={tag}>{tag}</span>)}</div>
             </div>
-
-            <div className="feature-list">
-              {aiHighlights.map((item) => (
-                <div
-                  key={item}
-                  className="feature-item"
-                >
-                  {item}
-                </div>
-              ))}
-            </div>
+            <div className="feature-list">{resumeFeatures.map(item=><div className="feature-item" key={item}>{item}</div>)}</div>
           </div>
-
           <div className="project-gallery">
-            <Image
-              src="/projects/ai-resume-2.png"
-              alt="AI Resume Job Matcher analysis results"
-              width={1920}
-              height={1080}
-            />
-
-            <Image
-              src="/projects/ai-resume-3.png"
-              alt="AI Resume Job Matcher recommendations"
-              width={1920}
-              height={1080}
-            />
+            <Image src="/projects/ai-resume-2.png" alt="Resume matcher analysis results" width={1920} height={1080}/>
+            <Image src="/projects/ai-resume-3.png" alt="Resume matcher recommendations" width={1920} height={1080}/>
           </div>
-
           <div className="project-links">
-            <a
-              className="button button-dark"
-              href="https://airesume-ten-opal.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Live Project ↗
-            </a>
-
-            <a
-              className="text-link"
-              href="https://github.com/tfindleyjr/ai-resume-job-matcher"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub ↗
-            </a>
+            <a className="button button-dark" href="https://airesume-ten-opal.vercel.app/" target="_blank" rel="noreferrer">Live Project ↗</a>
+            <a className="text-link dark-link" href="https://github.com/tfindleyjr/ai-resume-job-matcher" target="_blank" rel="noreferrer">GitHub ↗</a>
           </div>
         </article>
 
-        <div className="coming-soon-grid">
-          <article className="coming-card">
-            <span>03</span>
-            <h3>Next Project</h3>
-            <p>
-              Data-focused project demonstrating analytics, visualization, and
-              data-driven problem solving.
-            </p>
-          </article>
+        <article className="project-card">
+          <div className="project-meta-row">
+            <div>
+              <p className="eyebrow">Frontend Product Engineering</p>
+              <h3>BudgetFlow</h3>
+              <p className="project-subtitle">Personal Finance Dashboard</p>
+            </div>
+            <div className="project-number">03</div>
+          </div>
+          <div className="project-hero-image">
+            <Image src="/projects/budgetflow-3.png" alt="BudgetFlow personal finance dashboard" width={1920} height={1080}/>
+          </div>
+          <div className="project-content-grid">
+            <div>
+              <p className="project-description">A responsive personal finance dashboard for managing transactions, tracking spending, setting category budgets, and understanding financial behavior through visual insights.</p>
+              <div className="tag-row">{["Next.js","React","TypeScript","Recharts","Responsive Design","Vercel"].map(tag=><span className="tag" key={tag}>{tag}</span>)}</div>
+            </div>
+            <div className="feature-list">{budgetFeatures.map(item=><div className="feature-item" key={item}>{item}</div>)}</div>
+          </div>
+          <div className="project-gallery">
+            <Image src="/projects/budgetflow-1.png" alt="BudgetFlow insights" width={1600} height={900}/>
+            <Image src="/projects/budgetflow-2.png" alt="BudgetFlow transactions" width={1600} height={900}/>
+          </div>
+          <div className="project-links">
+            <a className="button button-dark" href="https://budgetflow-hyfb-six.vercel.app" target="_blank" rel="noreferrer">Live Project ↗</a>
+            <a className="text-link dark-link" href="https://github.com/tfindleyjr/budgetflow" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
+        </article>
+      </section>
 
-          <article className="coming-card">
-            <span>04</span>
-            <h3>Creative Technology</h3>
-            <p>
-              A visually ambitious project blending design, product thinking, and
-              engineering.
-            </p>
-          </article>
+      <section id="process" className="section-shell section-block">
+        <div className="section-heading"><span>02</span><h2>How I Build Now</h2></div>
+        <div className="process-grid">
+          <article><span>01</span><h3>Define the system</h3><p>I start with the user problem, core loop, data model, and what success must feel like before I write the interface.</p></article>
+          <article><span>02</span><h3>Build end to end</h3><p>I connect UI, APIs, authentication, persistence, data, and external services instead of treating the frontend as the entire product.</p></article>
+          <article><span>03</span><h3>Design for failure</h3><p>I use fallback states, loading feedback, local persistence, error handling, and progressive enhancement so the product remains useful when services fail.</p></article>
+          <article><span>04</span><h3>Ship and observe</h3><p>I use Git/GitHub, production builds, cloud deployment, environment configuration, and live runtime checks to move work beyond localhost.</p></article>
         </div>
       </section>
 
-      <section id="about" className="section-shell section-block split-section">
-        <div className="section-heading">
-          <span>02</span>
-          <h2>About</h2>
-        </div>
+      <section id="about" className="section-shell section-block">
+        <div className="section-heading"><span>03</span><h2>About</h2></div>
         <div className="about-grid">
-          <p className="about-lead">
-            I’m interested in the space where technology, design, and real-world problem solving overlap.
-          </p>
+          <p className="about-lead">I’m interested in becoming the kind of engineer who can understand the product, build the system, and care about the person using it.</p>
           <div className="about-copy">
-            <p>
-              My background in computer science and mathematics gives me the technical foundation to build software, while my creative interests push me to care just as much about how a product feels, communicates, and fits into people’s lives.
-            </p>
-            <p>
-              <p>
-                I&apos;m currently building a multidisciplinary computer science portfolio
-                spanning software development, artificial intelligence, data analysis,
-                product thinking, and creative technology.
-              </p>
-            </p>
+            <p>My background in computer science and mathematics gives me a technical foundation, while my experience in leadership and creative work has made communication, visual thinking, and user experience just as important to me as implementation.</p>
+            <p>My recent work has moved from standalone frontend projects into full-stack applications with AI, authentication, databases, cloud deployment, production state, and product architecture. I’m especially interested in software engineering, product engineering, AI-enabled applications, and teams where I can keep growing across disciplines.</p>
           </div>
         </div>
       </section>
 
       <section id="skills" className="section-shell section-block">
-        <div className="section-heading">
-          <span>03</span>
-          <h2>Capabilities</h2>
-        </div>
-        <div className="skills-grid">
-          {skills.map((skill) => <div className="skill" key={skill}>{skill}</div>)}
-        </div>
+        <div className="section-heading"><span>04</span><h2>Capabilities</h2></div>
+        <div className="skills-grid">{coreSkills.map(skill=><div className="skill" key={skill}>{skill}</div>)}</div>
       </section>
 
       <section className="section-shell section-block experience-section">
-        <div className="section-heading">
-          <span>04</span>
-          <h2>Education & Experience</h2>
-        </div>
+        <div className="section-heading"><span>05</span><h2>Education & Leadership</h2></div>
         <div className="timeline">
-          <div className="timeline-item">
-            <span>Present</span>
-            <div>
-              <h3>Master of Science in Computer Science</h3>
-              <p>Kentucky State University</p>
-            </div>
-          </div>
-          <div className="timeline-item">
-            <span>Completed</span>
-            <div>
-              <h3>Bachelor of Science in Computer Science</h3>
-              <p>Mathematics concentration · Kentucky State University</p>
-            </div>
-          </div>
-          <div className="timeline-item">
-            <span>Leadership</span>
-            <div>
-              <h3>31st Mister Kentucky State University</h3>
-              <p>Campus leadership, programming, public speaking, and community engagement.</p>
-            </div>
-          </div>
+          <div className="timeline-item"><span>Present</span><div><h3>Master of Science in Computer Science</h3><p>Kentucky State University</p></div></div>
+          <div className="timeline-item"><span>Completed</span><div><h3>Bachelor of Science in Computer Science</h3><p>Mathematics concentration · Kentucky State University</p></div></div>
+          <div className="timeline-item"><span>Leadership</span><div><h3>31st Mister Kentucky State University</h3><p>Campus leadership, programming, public speaking, and community engagement.</p></div></div>
         </div>
       </section>
 
       <section id="contact" className="contact-section">
         <div className="section-shell contact-inner">
-          <p className="eyebrow">Available for opportunities</p>
-          <h2>Let’s build something worth remembering.</h2>
-          <p>
-            I’m open to software, product, technology, and creative opportunities where I can combine technical execution with strong ideas.
-          </p>
+          <p className="eyebrow">Open to software & product opportunities</p>
+          <h2>Let’s build something people can actually use.</h2>
+          <p>I’m looking for opportunities where I can contribute as an engineer, learn from strong teams, and keep building products from problem to production.</p>
           <div className="contact-actions">
             <a className="button button-light" href="mailto:tfindleyjr@gmail.com">Email me</a>
-            <a className="text-link" href="https://www.linkedin.com/in/trenton-findley-jr-019439309/">LinkedIn ↗</a>
-            <a className="text-link" href="https://github.com/tfindleyjr">GitHub ↗</a>
+            <a className="text-link" href="https://www.linkedin.com/in/trenton-findley-jr-019439309/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a className="text-link" href="https://github.com/tfindleyjr" target="_blank" rel="noreferrer">GitHub ↗</a>
           </div>
         </div>
       </section>
 
-      <footer className="footer section-shell">
-        <span>© 2026 Trenton Findley Jr.</span>
-        <span>Built with Next.js</span>
-      </footer>
+      <footer className="footer section-shell"><span>© 2026 Trenton Findley Jr.</span><span>Designed & built with Next.js</span></footer>
     </main>
   );
 }
