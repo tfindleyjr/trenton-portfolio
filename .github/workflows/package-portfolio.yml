@@ -1,0 +1,34 @@
+name: Package Portfolio
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/package-portfolio.yml'
+  workflow_dispatch:
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout portfolio
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install dependencies
+        run: npm ci
+      - name: Verify production build
+        run: npm run build
+      - name: Prepare clean source package
+        run: |
+          mkdir -p package/trenton-portfolio-updated
+          rsync -a --exclude='.git' --exclude='node_modules' --exclude='.next' --exclude='package' ./ package/trenton-portfolio-updated/
+      - name: Upload portfolio package
+        uses: actions/upload-artifact@v4
+        with:
+          name: trenton-portfolio-updated
+          path: package/trenton-portfolio-updated
+          if-no-files-found: error
+          retention-days: 30
