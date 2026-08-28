@@ -1,6 +1,12 @@
-# Trenton Portfolio
+# Trenton Findley Jr. — Portfolio
 
-A polished Next.js portfolio starter built around the current BudgetFlow project.
+A production Next.js portfolio highlighting full-stack software engineering, AI-enabled products, product design, and cloud deployment.
+
+## Featured work
+
+- **BECOMR** — AI-powered real-life capability progression platform using Next.js, TypeScript, Supabase, PostgreSQL, OpenAI API, PWA architecture, and Vercel.
+- **AI Resume & Job Matcher** — Full-stack NLP application using Next.js, FastAPI, Python, REST APIs, Render, and Vercel.
+- **BudgetFlow** — Responsive personal finance dashboard built with Next.js, React, TypeScript, and data visualization.
 
 ## Run locally
 
@@ -9,12 +15,9 @@ npm install
 npm run dev
 ```
 
-## Before publishing
+## Production build
 
-Update these placeholders in `app/page.tsx`:
-
-- `YOUR_EMAIL_HERE`
-- `YOUR_LINKEDIN_URL_HERE`
-- `YOUR_GITHUB_URL_HERE`
-
-Also replace or remove the placeholder project cards as you complete more portfolio projects.
+```bash
+npm run build
+npm start
+```
