@@ -33,6 +33,27 @@ const budgetFeatures = [
   "Responsive component architecture",
 ];
 
+const nineShadowsFeatures = [
+  "15-question weighted assessment with percentile-based normalization",
+  "Primary + secondary Shadow ranking with close-result handling",
+  "Responsive quiz, reveal, and personalized result flows",
+  "Canvas-generated social share cards",
+  "Klaviyo API signup, consent, and profile-property sync",
+  "Analytics events and personalized discount-code conversion flow",
+];
+
+const shadowPairs = [
+  ["Pride", "Humility"],
+  ["Greed", "Generosity"],
+  ["Lust", "Devotion"],
+  ["Envy", "Gratitude"],
+  ["Gluttony", "Temperance"],
+  ["Wrath", "Forgiveness"],
+  ["Sloth", "Diligence"],
+  ["Deceit", "Truth"],
+  ["Apathy", "Compassion"],
+];
+
 export default function Home() {
   return (
     <main>
@@ -57,7 +78,7 @@ export default function Home() {
           <a className="button button-light" href="https://becomr-ten.vercel.app" target="_blank" rel="noreferrer">Open BECOMR ↗</a>
         </div>
         <div className="hero-proof">
-          <span><b>03</b> shipped products</span>
+          <span><b>04</b> shipped products</span>
           <span><b>Full-stack</b> frontend + backend</span>
           <span><b>Production</b> auth, AI, database, cloud</span>
         </div>
@@ -178,6 +199,49 @@ export default function Home() {
           <div className="project-links">
             <a className="button button-dark" href="https://budgetflow-hyfb-six.vercel.app" target="_blank" rel="noreferrer">Live Project ↗</a>
             <a className="text-link dark-link" href="https://github.com/tfindleyjr/budgetflow" target="_blank" rel="noreferrer">GitHub ↗</a>
+          </div>
+        </article>
+
+        <article className="project-card nine-shadows-project">
+          <div className="project-meta-row">
+            <div>
+              <p className="eyebrow">Interactive Brand Experience · Live</p>
+              <h3>Nine Shadows</h3>
+              <p className="project-subtitle">Self-Reflection Quiz for Lovers Studio</p>
+            </div>
+            <div className="project-number">04</div>
+          </div>
+
+          <div className="nine-shadows-showcase" aria-label="Nine Shadows quiz preview">
+            <div className="nine-shadows-logo">LOVERS STUDIO</div>
+            <p className="nine-shadows-kicker">An introspective experience</p>
+            <h4>THE NINE<br/>SHADOWS</h4>
+            <p className="nine-shadows-question">Which part of yourself needs the most love?</p>
+            <div className="shadow-heart-grid">
+              {shadowPairs.map(([shadow, heart]) => (
+                <div className="shadow-heart" key={shadow}>
+                  <span>♥</span>
+                  <small>{shadow}</small>
+                  <strong>{heart}</strong>
+                </div>
+              ))}
+            </div>
+            <div className="nine-shadows-meta"><span>15 QUESTIONS</span><span>~3 MINUTES</span><span>9 RESULT PATHS</span></div>
+          </div>
+
+          <div className="project-content-grid">
+            <div>
+              <p className="project-description">
+                A branded self-reflection experience built for Lovers Studio that turns 15 multiple-choice responses into a primary and secondary Shadow, a paired Heart practice, a personalized result narrative, a social share card, and a product/discount path. I designed the scoring model and the full quiz-to-conversion experience.
+              </p>
+              <div className="tag-row">{["JavaScript","HTML/CSS","Vercel","Klaviyo API","Canvas API","Product Design"].map(tag=><span className="tag" key={tag}>{tag}</span>)}</div>
+            </div>
+            <div className="feature-list">{nineShadowsFeatures.map(item=><div className="feature-item" key={item}>{item}</div>)}</div>
+          </div>
+
+          <div className="project-links">
+            <a className="button button-dark" href="https://quiz.lovers-studio.com" target="_blank" rel="noreferrer">Launch Quiz ↗</a>
+            <a className="text-link dark-link" href="https://github.com/tfindleyjr/nine-shadows-quiz" target="_blank" rel="noreferrer">GitHub ↗</a>
           </div>
         </article>
       </section>
